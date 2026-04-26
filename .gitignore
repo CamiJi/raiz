@@ -12,11 +12,13 @@
 # Ignore SQL dumps by default, except the canonical project backup
 *.sql
 !wp-content/raiz_backup.sql
+!wp-content/raiz_v1_servicios_ready.sql
 
 # Keep only the custom theme under wp-content
 !wp-content/
 wp-content/*
 !wp-content/raiz_backup.sql
+!wp-content/raiz_v1_servicios_ready.sql
 !wp-content/themes/
 wp-content/themes/*
 !wp-content/themes/raiz-v1/
