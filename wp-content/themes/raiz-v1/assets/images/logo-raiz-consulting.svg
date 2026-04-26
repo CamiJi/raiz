@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 220" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Raiz Small Hotels Consulting</title>
+  <desc id="logo-desc">Wordmark logo for Raiz Small Hotels Consulting with a warm terracotta monogram, hospitality sketch and root detail.</desc>
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'RaizHeading';
+        src: url('../fonts/playfair-display-700-latin.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'RaizBody';
+        src: url('../fonts/inter-400-latin.woff2') format('woff2');
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      .brand {
+        fill: #8c3623;
+      }
+
+      .brand-line {
+        fill: none;
+        stroke: #8c3623;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .wordmark {
+        font-family: 'RaizHeading', 'Times New Roman', serif;
+        font-size: 146px;
+        letter-spacing: 1px;
+      }
+
+      .tagline {
+        font-family: 'RaizHeading', 'Times New Roman', serif;
+        font-size: 52px;
+        letter-spacing: 0.4px;
+      }
+    </style>
+  </defs>
+
+  <g class="brand">
+    <text class="wordmark" x="12" y="144">RAI</text>
+    <text class="wordmark" x="396" y="144">Z</text>
+    <path d="M333 36 L348 14 L362 22 L344 48 Z" />
+  </g>
+
+  <g class="brand-line" stroke-width="3">
+    <path d="M227 145 C250 100 282 79 325 77 C364 75 398 92 424 126" />
+    <path d="M438 70 C472 64 509 67 540 87 C566 103 581 128 583 146" />
+    <path d="M469 82 L469 126" />
+    <path d="M505 88 L505 135" />
+    <path d="M422 126 L582 126" />
+    <path d="M421 127 C414 139 408 147 400 153" />
+    <path d="M585 128 C598 117 608 107 617 95" />
+    <path d="M416 89 C428 80 443 76 458 76" />
+    <path d="M446 80 C451 71 459 67 468 66" />
+    <path d="M480 68 C491 63 504 62 517 64" />
+    <path d="M529 67 C542 70 553 77 561 87" />
+    <path d="M560 93 C576 97 590 107 600 120" />
+    <path d="M487 128 L487 110" />
+    <path d="M518 128 L518 110" />
+    <path d="M483 108 L492 108" />
+    <path d="M514 108 L523 108" />
+    <path d="M532 126 L532 101 C541 98 549 98 556 101 L556 126" />
+    <path d="M540 109 L548 109" />
+  </g>
+
+  <g class="brand-line" stroke-width="2.6">
+    <path d="M298 149 C294 163 294 175 298 188" />
+    <path d="M298 188 C289 194 281 202 276 214" />
+    <path d="M298 190 C302 198 305 207 306 220" />
+    <path d="M295 175 C286 180 278 186 271 194" />
+    <path d="M302 173 C309 180 315 188 320 198" />
+    <path d="M293 199 C286 202 280 208 276 214" />
+    <path d="M304 202 C310 206 315 212 318 218" />
+    <path d="M288 169 C280 170 272 174 266 180" />
+    <path d="M306 165 C314 166 322 171 328 178" />
+  </g>
+
+  <text class="tagline brand" x="668" y="116">Small Hotels Consulting</text>
+</svg>
