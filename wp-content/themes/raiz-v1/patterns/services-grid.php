@@ -7,8 +7,8 @@
  */
 ?>
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem","left":"1.25rem","right":"1.25rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:4rem;padding-right:1.25rem;padding-bottom:4rem;padding-left:1.25rem"><!-- wp:group {"layout":{"type":"constrained","contentSize":"960px"},"style":{"spacing":{"blockGap":"2rem"}}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"2rem"}}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":2,"style":{"color":{"text":"var(--wp--preset--color--contrast)"}}} -->
 <h2 class="wp-block-heading has-text-align-center" style="color:var(--wp--preset--color--contrast)">Servicios que respetan tu esencia y aceleran resultados</h2>
 <!-- /wp:heading -->

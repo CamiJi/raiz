@@ -11,6 +11,43 @@
         { "slug": "tertiary", "color": "#8C2E26", "name": "Accent (Brique)" }
       ]
     },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true,
+      "spacingSizes": [
+        {
+          "name": "Espacement 10",
+          "size": "clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem)",
+          "slug": "10"
+        },
+        {
+          "name": "Espacement 20",
+          "size": "clamp(0.75rem, 0.7rem + 0.3vw, 1rem)",
+          "slug": "20"
+        },
+        {
+          "name": "Espacement 30",
+          "size": "clamp(1rem, 0.9rem + 0.5vw, 1.5rem)",
+          "slug": "30"
+        },
+        {
+          "name": "Espacement 40",
+          "size": "clamp(1.5rem, 1.2rem + 1vw, 2rem)",
+          "slug": "40"
+        },
+        {
+          "name": "Espacement 50",
+          "size": "clamp(2rem, 1.5rem + 1.5vw, 3rem)",
+          "slug": "50"
+        },
+        {
+          "name": "Espacement 60",
+          "size": "clamp(3rem, 2.4rem + 2vw, 4rem)",
+          "slug": "60"
+        }
+      ]
+    },
     "typography": {
         "fluid": true,
         "fontFamilies": [
@@ -85,6 +122,13 @@
     }
   },
   "styles": {
+    "spacing": {
+      "blockGap": "1.5rem",
+      "padding": {
+        "left": "clamp(1rem, 3vw, 2rem)",
+        "right": "clamp(1rem, 3vw, 2rem)"
+      }
+    },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--body-font)",
       "lineHeight": "1.6"

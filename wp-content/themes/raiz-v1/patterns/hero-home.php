@@ -7,8 +7,8 @@
  */
 ?>
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"5rem","bottom":"5rem","left":"1.25rem","right":"1.25rem"}},"color":{"background":"var(--wp--preset--color--base)"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background" style="background-color:var(--wp--preset--color--base);padding-top:5rem;padding-right:1.25rem;padding-bottom:5rem;padding-left:1.25rem"><!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"color":{"background":"var(--wp--preset--color--base)"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-background" style="background-color:var(--wp--preset--color--base);padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--50)"><!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"clamp(2rem,5vw,3.75rem)","lineHeight":"1.1"},"color":{"text":"var(--wp--preset--color--contrast)"}}} -->
 <h1 class="wp-block-heading has-text-align-center" style="color:var(--wp--preset--color--contrast);font-size:clamp(2rem,5vw,3.75rem);line-height:1.1">RAÍZ, La base para que tu hotel crezca sin perder su esencia</h1>
 <!-- /wp:heading -->
