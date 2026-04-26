@@ -12,19 +12,72 @@
       ]
     },
     "typography": {
-      "fluid": true,
-      "fontFamilies": [
-        {
-          "fontFamily": "serif",
-          "name": "Serif (Élégance)",
-          "slug": "serif"
-        },
-        {
-          "fontFamily": "sans-serif",
-          "name": "Sans (Moderne)",
-          "slug": "sans-serif"
-        }
-      ]
+        "fluid": true,
+        "fontFamilies": [
+            {
+                "fontFamily": "'Playfair Display', serif",
+                "name": "Playfair Display (Luxe)",
+            "slug": "heading-font",
+            "fontFace": [
+              {
+                "fontFamily": "Playfair Display",
+                "fontStyle": "normal",
+                "fontWeight": "700",
+                "fontDisplay": "swap",
+                "src": [
+                  "file:./assets/fonts/playfair-display-700-latin.woff2"
+                ]
+              }
+            ]
+            },
+            {
+                "fontFamily": "Inter, sans-serif",
+                "name": "Inter (Moderne)",
+            "slug": "body-font",
+            "fontFace": [
+              {
+                "fontFamily": "Inter",
+                "fontStyle": "normal",
+                "fontWeight": "400",
+                "fontDisplay": "swap",
+                "src": [
+                  "file:./assets/fonts/inter-400-latin.woff2"
+                ]
+              },
+              {
+                "fontFamily": "Inter",
+                "fontStyle": "normal",
+                "fontWeight": "700",
+                "fontDisplay": "swap",
+                "src": [
+                  "file:./assets/fonts/inter-700-latin.woff2"
+                ]
+              }
+            ]
+            }
+        ],
+        "fontSizes": [
+            {
+                "name": "Small",
+            "size": "clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem)",
+                "slug": "small"
+            },
+            {
+                "name": "Medium",
+            "size": "clamp(1.05rem, 1rem + 0.35vw, 1.2rem)",
+                "slug": "medium"
+            },
+            {
+                "name": "Large",
+                "size": "clamp(1.75rem, 3vw, 2.25rem)",
+                "slug": "large"
+            },
+            {
+                "name": "Extra Large",
+                "size": "clamp(2.5rem, 5vw, 4rem)",
+                "slug": "x-large"
+            }
+        ]
     },
     "layout": {
       "contentSize": "800px",
@@ -32,6 +85,10 @@
     }
   },
   "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body-font)",
+      "lineHeight": "1.6"
+    },
     "color": {
       "background": "var(--wp--preset--color--base)",
       "text": "#2A2A2A"
@@ -39,7 +96,11 @@
     "elements": {
       "heading": {
         "color": "var(--wp--preset--color--contrast)",
-        "typography": { "fontFamily": "var(--wp--preset--font-family--serif)" }
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading-font)",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
       },
       "link": {
         "color": "var(--wp--preset--color--primary)"
