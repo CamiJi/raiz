@@ -4,7 +4,7 @@
     "appearanceTools": true,
     "color": {
       "palette": [
-        { "slug": "base", "color": "#F2E8DC", "name": "Fond (Sable)" },
+        { "slug": "base", "color": "#FBEFE0", "name": "Fond (Sable)" },
         { "slug": "contrast", "color": "#590902", "name": "Titres (Profond)" },
         { "slug": "primary", "color": "#8C3623", "name": "Primaire (Terre)" },
         { "slug": "secondary", "color": "#BF9180", "name": "Secondaire (Doux)" },
@@ -57,7 +57,7 @@
             "slug": "heading-font",
             "fontFace": [
               {
-                "fontFamily": "Playfair Display",
+        "fontFamily": "Playfair Display",
                 "fontStyle": "normal",
                 "fontWeight": "700",
                 "fontDisplay": "swap",
