@@ -3,14 +3,20 @@
 
 # Keep repository control files
 !.gitignore
+!README.md
 
 # Keep Docker compose file (both common spellings)
 !docker-compose.yml
 !docker-compose.yaml
 
+# Ignore SQL dumps by default, except the canonical project backup
+*.sql
+!wp-content/raiz_backup.sql
+
 # Keep only the custom theme under wp-content
 !wp-content/
 wp-content/*
+!wp-content/raiz_backup.sql
 !wp-content/themes/
 wp-content/themes/*
 !wp-content/themes/raiz-v1/
