@@ -19,7 +19,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"url":"<?php echo esc_url( get_permalink( 18 ) ); ?>","style":{"color":{"background":"var(--wp--preset--color--primary)","text":"var(--wp--preset--color--base)"},"border":{"radius":"999px"},"spacing":{"padding":{"top":"0.8rem","bottom":"0.8rem","left":"1.5rem","right":"1.5rem"}}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="<?php echo esc_url( get_permalink( 18 ) ); ?>" style="border-radius:999px;color:var(--wp--preset--color--base);background-color:var(--wp--preset--color--primary);padding-top:0.8rem;padding-right:1.5rem;padding-bottom:0.8rem;padding-left:1.5rem">Agendar una consulta</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="<?php echo esc_url( get_permalink( 18 ) ); ?>" style="border-radius:999px;color:var(--wp--preset--color--base);background-color:var(--wp--preset--color--primary);padding-top:0.8rem;padding-right:1.5rem;padding-bottom:0.8rem;padding-left:1.5rem" target="_self">Agendar una consulta</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
