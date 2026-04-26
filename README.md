@@ -1,93 +1,140 @@
-# Raiz Consulting - WordPress FSE Theme
+# Raiz Consulting V1 - WordPress FSE
 
-Professional WordPress Full Site Editing (FSE) project for **Raiz Consulting V1**, a boutique hotel consulting brand focused on organic growth, identity, and operational expertise.
+Projet WordPress local (Docker) pour le site Raiz Consulting V1, basé sur un thème bloc Full Site Editing (FSE) personnalisé.
 
-## Project Overview
+## Objectif du repository
 
-This repository contains:
-- A Docker-based local WordPress environment.
-- A custom block theme located at `wp-content/themes/raiz-v1`.
-- FSE structure files (template parts, templates, and block patterns).
+Ce dépôt conserve uniquement les éléments utiles au projet :
 
-## Tech Stack
+- La stack locale Docker WordPress + MariaDB.
+- Le thème personnalisé `raiz-v1`.
+- Les exports SQL validés du projet.
 
-- WordPress (Block Theme / FSE)
+Le core WordPress, les plugins et les uploads sont volontairement non versionnés (sauf exceptions définies dans `.gitignore`).
+
+## Stack technique
+
+- WordPress (thème bloc / FSE)
+- MariaDB 10.11
 - Docker Compose
-- Native WordPress blocks and block pattern files (`.html` and `.php`)
+- Patterns blocs WordPress (`.php`) et templates/parts (`.html`)
 
-## Repository Structure
+## Démarrage local
 
-```text
-.
-├── docker-compose.yaml
-└── wp-content/
-    └── themes/
-        └── raiz-v1/
-            ├── parts/
-            │   ├── header.html
-            │   └── footer.html
-            ├── templates/
-            │   ├── index.html
-            │   └── page.html
-            ├── patterns/
-            │   ├── hero-home.php
-            │   ├── services-grid.php
-            │   └── about-founders.php
-            ├── pattern/
-            │   └── hero-inicio.php
-            ├── style.css
-            └── theme.json
-```
-
-## Theme Highlights
-
-- **FSE-first architecture** with template parts and templates.
-- **Custom design tokens** in `theme.json`:
-  - Color palette (`base`, `contrast`, `primary`, `secondary`, `tertiary`)
-  - Fluid typography enabled
-  - Constrained content and wide layout sizes
-- **Spanish content patterns** for homepage and key business sections.
-- **Polylang-ready header** with language switcher block support.
-
-## Local Development
-
-### 1. Start containers
+### 1) Lancer l'environnement
 
 ```bash
 docker compose up -d
 ```
 
-### 2. Open WordPress
+### 2) Accéder au site
 
-Open your configured local WordPress URL (depends on your Docker setup).
+- Front/Back Office WordPress : http://localhost:8080
 
-### 3. Work on the theme
+### 3) Arrêter l'environnement
 
-Main theme path:
-
-```text
-wp-content/themes/raiz-v1
+```bash
+docker compose down
 ```
 
-## Block Patterns Registration
+## Structure versionnée
 
-Pattern files in `wp-content/themes/raiz-v1/patterns/` include WordPress headers with:
-- `Title`
-- `Slug`
-- `Categories`
+```text
+.
+├── docker-compose.yaml
+├── README.md
+└── wp-content/
+    ├── raiz_backup.sql
+    ├── raiz_v1_servicios_ready.sql
+    └── themes/
+        └── raiz-v1/
+            ├── assets/
+            ├── parts/
+            ├── pattern/
+            ├── patterns/
+            ├── templates/
+            ├── style.css
+            └── theme.json
+```
 
-This allows them to appear in the Site Editor inserter.
+## État actuel du thème
 
-## Git Notes
+Le thème `wp-content/themes/raiz-v1` inclut notamment :
 
-The root `.gitignore` is configured to:
-- Ignore WordPress core and unrelated content by default.
-- Keep this custom theme tracked:
-  - `wp-content/themes/raiz-v1/**`
-- Keep Docker compose file tracked.
+- Un système de design dans `theme.json` :
+-   Palette couleurs (base, contrast, primary, secondary, tertiary)
+-   Typographie fluide activée
+-   Familles locales déclarées (Playfair Display, Inter)
+-   Échelle d'espacement responsive (`clamp`)
+-   Layout contenu (`contentSize: 800px`, `wideSize: 1200px`)
+- Une architecture FSE standard : `parts`, `templates`, `patterns`.
+- Un header avec logo natif et navigation.
+- Un style dédié au switcher de langue Polylang dans `style.css`.
 
-## Recommended Next Steps
+## Base de données SQL (export/import)
 
-- Add screenshots/GIFs of key templates.
-- Document exact Docker service names and ports.
-- Add deployment notes (staging/production workflow).
+Deux dumps SQL sont suivis dans le dépôt :
+
+- `wp-content/raiz_backup.sql` : sauvegarde de référence.
+- `wp-content/raiz_v1_servicios_ready.sql` : export mis à jour avec la page Servicios finalisée.
+
+### Importer un dump SQL dans la base locale
+
+Depuis la racine du projet :
+
+```bash
+docker compose exec -T db mysql -uuser -ppassword wordpress < wp-content/raiz_v1_servicios_ready.sql
+```
+
+Si besoin de repartir proprement avant import :
+
+```bash
+docker compose exec -T db mysql -uuser -ppassword -e "DROP DATABASE IF EXISTS wordpress; CREATE DATABASE wordpress;"
+docker compose exec -T db mysql -uuser -ppassword wordpress < wp-content/raiz_v1_servicios_ready.sql
+```
+
+### Exporter la base SQL courante
+
+```bash
+docker compose exec -T db mysqldump -uuser -ppassword wordpress > wp-content/raiz_v1_servicios_ready.sql
+```
+
+Vérification rapide du fichier exporté :
+
+```bash
+ls -lh wp-content/*.sql
+```
+
+## Convention Git du projet
+
+Le `.gitignore` est configuré en mode "deny-all puis exceptions" :
+
+- Ignore tout par défaut.
+- Garde `README.md`, `.gitignore`, `docker-compose.yaml`.
+- Ignore les dumps SQL par défaut mais autorise explicitement :
+-   `wp-content/raiz_backup.sql`
+-   `wp-content/raiz_v1_servicios_ready.sql`
+- Garde uniquement le thème custom : `wp-content/themes/raiz-v1/**`.
+
+## Historique récent (résumé)
+
+Dernières avancées intégrées :
+
+- Typographie fluide et polices locales.
+- Système d'espacement/layout dans `theme.json`.
+- Pattern détaillé pour les services.
+- Intégration et fiabilisation du logo natif dans le header.
+- Ajout et suivi Git de l'export SQL "servicios ready".
+
+## Commandes utiles
+
+```bash
+# Logs WordPress
+docker compose logs -f wordpress
+
+# Logs DB
+docker compose logs -f db
+
+# Statut des conteneurs
+docker compose ps
+```
